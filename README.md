@@ -42,6 +42,7 @@ import DateRangeFilter from "searchkit-daterangefilter"
 
 ## Example
 
+
 ```
 const Demo = React.createClass({
   render() {
