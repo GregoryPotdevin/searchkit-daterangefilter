@@ -4,7 +4,7 @@ module.exports = {
     externals: {
       'react': 'React'
     },
-    global: 'MultiSelect',
+    global: 'DateRangeFilter',
     jsNext: true,
     umd: true
   }

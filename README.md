@@ -40,8 +40,6 @@ import DateRangeFilter from "searchkit-daterangefilter"
   showHistogram={true} />
 ```
 
-It is recommended to increase the size to benefit from the filter functionnality.
-
 ## Example
 
 ```

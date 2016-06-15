@@ -5,7 +5,6 @@
   "main": "lib/index.js",
   "jsnext:main": "es6/index.js",
   "files": [
-    "css",
     "es6",
     "lib",
     "umd"
