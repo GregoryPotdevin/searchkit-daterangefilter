@@ -15,8 +15,6 @@ DateRangeFilter component for Searchkit
 [coveralls-badge]: https://img.shields.io/coveralls/GregoryPotdevin/searchkit-daterangefilter/master.svg?style=flat-square
 [coveralls]: https://coveralls.io/github/GregoryPotdevin/searchkit-daterangefilter
 
-![Preview](doc/preview.png?raw=true "Preview")
-
 ## Installation
 
 `npm install searchkit-daterangefilter --save`
@@ -32,13 +30,14 @@ import DateRangeFilter from "searchkit-daterangefilter"
 ```
 
 ```
-<DateRangeFilter
-  id="actors"
-  title="Actors"
-  field="actors.raw"
-  operator="AND"
-  listComponent={MultiSelect}
-  size={200}/>
+<DateRangeFilter 
+  id="year"
+  field="publication_date"
+  title="Publication Date"
+  min={2005} 
+  max={new Date().getFullYear()} 
+  interval="year"
+  showHistogram={true} />
 ```
 
 It is recommended to increase the size to benefit from the filter functionnality.
@@ -63,7 +62,14 @@ const Demo = React.createClass({
                 fields={["type.raw", "genres.raw"]}
                 title="Categories"
                 id="categories"/>
-              <DateRangeFilter/>
+              <DateRangeFilter 
+                id="year"
+                field="publication_date"
+                title="Publication Date"
+                min={2005} 
+                max={new Date().getFullYear()} 
+                interval="year"
+                showHistogram={true} />
             </SideBar>
             <LayoutResults>
               <Hits mod="sk-hits-grid" hitsPerPage={10} itemComponent={MovieHitsGridItem}
