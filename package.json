@@ -18,7 +18,8 @@
   },
   "peerDependencies": {
     "react": "0.14.x",
-    "searchkit": "0.9.x"
+    "searchkit": "0.9.x",
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
     "nwb": "0.9.x",
@@ -26,8 +27,13 @@
     "react": "0.14.x",
     "react-dom": "0.14.x"
   },
-  "author": "Gregory Potdevin",
-  "homepage": "http://www.appcraft.fr/",
+  "authors": [
+    {
+      "name": "Gregory Potdeviny",
+      "email": "gregory@appcraft.fr"
+    }
+  ],
+  "homepage": "http://gregorypotdevin.github.io/searchkit-daterangefilter/",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -41,6 +47,8 @@
     "elastic search",
     "react",
     "search",
-    "widgets"
+    "widgets",
+    "date",
+    "date range"
   ]
 }
