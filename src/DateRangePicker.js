@@ -14,6 +14,8 @@ import { DateRangeAccessor } from './DateRangeAccessor'
 const defaults = require("lodash/defaults")
 const max = require("lodash/max")
 const map = require("lodash/map")
+const maxBy = require("lodash/maxBy")
+const get = require("lodash/get")
 
 function computeMaxValue(items, field) {
   if (!items || items.length == 0) return 0

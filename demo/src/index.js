@@ -10,8 +10,7 @@ import {
 
 require('searchkit/theming/theme.scss')
 
-import MultiSelect from "../../src"
-require('../../css/multiselect.css')
+import { DateRangeFilter } from "../../src"
 
 const host = "http://demo.searchkit.co/api/movies"
 const searchkit = new SearchkitManager(host)
@@ -48,20 +47,14 @@ const Demo = React.createClass({
                 fields={["type.raw", "genres.raw"]}
                 title="Categories"
                 id="categories"/>
-              <RefinementListFilter
-                id="actors"
-                title="Actors"
-                field="actors.raw"
-                operator="AND"
-                listComponent={MultiSelect}
-                size={200}/>
-              <RefinementListFilter
-                id="writers"
-                title="Writers"
-                field="writers.raw"
-                operator="AND"
-                listComponent={MultiSelect}
-                size={200}/>
+              <DateRangeFilter 
+                id="year"
+                field="publication_date"
+                title="Publication Date"
+                min={2005} 
+                max={new Date().getFullYear()} 
+                interval="year"
+                showHistogram={true} />
             </SideBar>
             <LayoutResults>
               <Hits mod="sk-hits-grid" hitsPerPage={10} itemComponent={MovieHitsGridItem}
