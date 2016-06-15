@@ -1,0 +1,47 @@
+{
+  "name": "searchkit-daterangefilter",
+  "version": "0.0.1",
+  "description": "Searchkit DateRangeFilter component",
+  "main": "lib/index.js",
+  "jsnext:main": "es6/index.js",
+  "files": [
+    "css",
+    "es6",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build",
+    "clean": "nwb clean",
+    "start": "nwb serve",
+    "test": "nwb test",
+    "test:watch": "nwb test --server"
+  },
+  "peerDependencies": {
+    "react": "0.14.x",
+    "searchkit": "0.9.x"
+  },
+  "devDependencies": {
+    "nwb": "0.9.x",
+    "nwb-sass": "^0.5.0",
+    "react": "0.14.x",
+    "react-dom": "0.14.x"
+  },
+  "author": "Gregory Potdevin",
+  "homepage": "http://www.appcraft.fr/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GregoryPotdevin/searchkit-daterangefilter.git"
+  },
+  "keywords": [
+    "react-component",
+    "react components",
+    "searchkit",
+    "elasticsearch",
+    "elastic search",
+    "react",
+    "search",
+    "widgets"
+  ]
+}
