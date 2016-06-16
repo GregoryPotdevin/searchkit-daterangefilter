@@ -26,7 +26,7 @@ Similar to the classic RangeFilter, but with a date field
 ## Usage
 
 ```
-import DateRangeFilter from "searchkit-daterangefilter"
+import { DateRangeFilter } from "searchkit-daterangefilter"
 ```
 
 ```
