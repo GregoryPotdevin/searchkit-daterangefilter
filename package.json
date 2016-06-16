@@ -1,6 +1,6 @@
 {
   "name": "searchkit-daterangefilter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Searchkit DateRangeFilter component",
   "main": "lib/index.js",
   "jsnext:main": "es6/index.js",
