@@ -2,7 +2,8 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import Component from 'src/'
+import { DateRangeFilter } from 'src/'
+import { SearchkitManager } from 'searchkit'
 
 describe('Component', () => {
   let node
@@ -16,8 +17,9 @@ describe('Component', () => {
   })
 
   it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
+    const manager = SearchkitManager.mock()
+    render(<DateRangeFilter searchkit={manager} id="test" field="test" min={0} max={2017} />, node, () => {
+      expect(node.innerHTML).toContain('<div class="rc-slider"')
     })
   })
 })

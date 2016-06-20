@@ -1,3 +1,3 @@
 export * from "./DateHistogramBucket"
-export * from "./DateRangePicker"
+export * from "./DateRangeFilter"
 export * from "./DateRangeAccessor"
