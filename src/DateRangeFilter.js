@@ -5,7 +5,7 @@ import {
 	FastClick,
 	RangeAccessor,
 	renderComponent,
-	Panel, 
+	Panel,
 	RangeSliderHistogram, RangeSlider
 } from "searchkit"
 
@@ -90,9 +90,10 @@ export class DateRangeFilter extends SearchkitComponent {
   renderRangeComponent(component) {
     const { min, max } = this.props
     const state = this.accessor.state.getValue()
+    const minHeight = (this.props.showHistogram ? 100 : 0)
     return (
       <div className="search-result-dropdown">
-        <div style={{padding: 16, minHeight: 100}}>
+        <div style={{padding: 16, minHeight: minHeight}}>
           {renderComponent(component, {
             min, max,
             minValue: Number(get(state, "min", min)),
