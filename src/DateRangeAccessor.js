@@ -1,10 +1,10 @@
-import { 
-  FilterBasedAccessor, 
-  ObjectState, 
-  RangeQuery, 
-  BoolMust, 
-  CardinalityMetric, 
-  FilterBucket 
+import {
+  FilterBasedAccessor,
+  ObjectState,
+  RangeQuery,
+  BoolMust,
+  CardinalityMetric,
+  FilterBucket
 } from "searchkit"
 
 import { DateHistogramBucket } from "./DateHistogramBucket"
@@ -17,7 +17,7 @@ export class DateRangeAccessor extends FilterBasedAccessor {
 	constructor(key, options){
     super(key, options.id)
     this.options = options
-    
+
     this.state = new ObjectState({})
   }
 
@@ -73,24 +73,18 @@ export class DateRangeAccessor extends FilterBasedAccessor {
 			let filters = BoolMust([
 				otherFilters,
 				RangeQuery(this.options.field,{
-					gte:this.options.min, lte:this.options.max
+					gte:this.options.min + "||/y", lte:this.options.max + "||/y"
 				})
 			])
 
-			let metric
-
-			if (this.options.loadHistogram) {
-				metric = DateHistogramBucket(this.key, this.options.field, {
-					"interval":this.getInterval(),
-					"min_doc_count":0,
-					"extended_bounds":{
-						"min":this.options.min,
-						"max":this.options.max
-					}
-				})
-			} else {
-				metric = CardinalityMetric(this.key, this.options.field)
-			}
+			let metric = DateHistogramBucket(this.key, this.options.field, {
+				"interval":this.getInterval(),
+				"min_doc_count":0,
+				"extended_bounds":{
+					"min": "" + this.options.min,
+					"max": "" + this.options.max
+				}
+			})
 
 			return query.setAggs(FilterBucket(
 				this.key,
