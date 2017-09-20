@@ -18,8 +18,8 @@ describe('Component', () => {
 
   it('displays a welcome message', () => {
     const manager = SearchkitManager.mock()
-    render(<DateRangeFilter searchkit={manager} id="test" field="test" min={0} max={2017} />, node, () => {
-      expect(node.innerHTML).toContain('<div class="rc-slider"')
+    render(<DateRangeFilter searchkit={manager} id="test" field="test" title="test" min={0} max={2017} />, node, () => {
+      expect(node.innerHTML).toContain('<div class="rc-slider')
     })
   })
 })
