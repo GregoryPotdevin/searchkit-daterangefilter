@@ -2,7 +2,7 @@ import React from 'react'
 import {render} from 'react-dom'
 
 import {
-  SearchkitProvider, SearchkitManager,  
+  SearchkitProvider, SearchkitManager,
   Layout, LayoutResults, LayoutBody, TopBar, SideBar,
   SearchBox, HierarchicalMenuFilter, RefinementListFilter,
   Hits, NoHits,
@@ -47,12 +47,12 @@ const Demo = React.createClass({
                 fields={["type.raw", "genres.raw"]}
                 title="Categories"
                 id="categories"/>
-              <DateRangeFilter 
+              <DateRangeFilter
                 id="year"
-                field="publication_date"
-                title="Publication Date"
-                min={2005} 
-                max={new Date().getFullYear()} 
+                field="released"
+                title="Release Date"
+                min={2005}
+                max={new Date().getFullYear()}
                 interval="year"
                 showHistogram={true} />
             </SideBar>
