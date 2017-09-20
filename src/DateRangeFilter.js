@@ -1,4 +1,5 @@
-import * as React from 'react'
+import React from 'react'
+import PropTypes from 'prop-types';
 
 import {
 	SearchkitComponent,
@@ -109,9 +110,9 @@ export class DateRangeFilter extends SearchkitComponent {
 }
 
 DateRangeFilter.propTypes = defaults({
-  field:React.PropTypes.string.isRequired,
-  title:React.PropTypes.string.isRequired,
-  id:React.PropTypes.string.isRequired,
+  field:PropTypes.string.isRequired,
+  title:PropTypes.string.isRequired,
+  id:PropTypes.string.isRequired,
   // containerComponent:RenderComponentPropType,
   // rangeComponent:RenderComponentPropType
 }, SearchkitComponent.propTypes)
